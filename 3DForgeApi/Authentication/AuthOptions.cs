@@ -9,10 +9,9 @@ namespace _3DForgeApi
 {
     public class AuthOptions
     {
-        public const string ISSUER = "AuthServer"; // издатель токена
-        public const string AUDIENCE = "http://localhost:13267/"; // потребитель токена
+        public const string ISSUER = "ExampleIssuer"; // издатель токена
+        public const string AUDIENCE = "ExampleAudience"; // потребитель токена
         const string KEY = "mysupersecret_secretkey!123";   // ключ для шифрации
-        public const int LIFETIME = 1; // время жизни токена - 1 минута
         public static SymmetricSecurityKey GetSymmetricSecurityKey()
         {
             return new SymmetricSecurityKey(Encoding.ASCII.GetBytes(KEY));

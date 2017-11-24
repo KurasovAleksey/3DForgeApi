@@ -9,12 +9,14 @@ namespace _3DForgeApi.DAL.Model
 {
     public enum Role
     {
-        Admin,
-        Manager
+        Admin = 0,
+        Manager = 1
     }
 
     public class Person
     {
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
         public string Login { get; set; }
         public string PasswordHash { get; set; }
         [BsonRepresentation(BsonType.String)]

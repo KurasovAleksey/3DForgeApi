@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace _3DForgeApi.DAL.Model
 {
-    public enum CardBrend
+    public enum CardBrand
     {
-        Visa,
-        MasterCard
+        Visa = 0,
+        MasterCard = 1
     }
 
     public class Card
@@ -21,6 +21,6 @@ namespace _3DForgeApi.DAL.Model
         public string FirstName { get; set; }
         public string LastName { get; set; }
         [BsonRepresentation(BsonType.String)]
-        public CardBrend Brend { get; set; }
+        public CardBrand Brand { get; set; }
     }
 }
