@@ -41,8 +41,10 @@ namespace _3DForgeApi.DAL.Model
         {
             var filter = Builders<Order>.Filter.Eq("Id", id);
             var update = Builders<Order>.Update
-                .Set(o => o.IsApproved, order.IsApproved)
-                .Set(o => o.IsValidate, order.IsValidate)
+                .Set(o => o.IsClosed, order.IsClosed)
+                .Set(o => o.IsValid, order.IsValid)
+                .Set(o => o.TotalPrice, order.TotalPrice)
+                .Set(o => o.Info, order.Info)
                 .Set(o => o.PaymentCard, order.PaymentCard)
                 .Set(o => o.ShippingAddress, order.ShippingAddress);
 
